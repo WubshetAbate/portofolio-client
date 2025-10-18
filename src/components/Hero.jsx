@@ -24,11 +24,10 @@ export default function Hero({ scrollToSection }) {
 
           {/* Downloadable Resume Button */}
           <a
-            href="../../public/CV & documents .docx"
+            href="/CV & documents .docx" // <-- fixed path
             download="CV & documents .docx"
             className={styles.secondaryButton}
           >
-            {/* Download Icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -103,7 +102,7 @@ export default function Hero({ scrollToSection }) {
         <div className={styles.profileContainer}>
           <div className={styles.profileRing}></div>
           <img
-            src="../../public/Images/WhatsApp Image 2025-10-18 at 17.21.50_bf03f7eaaa.jpg"
+            src="/Images/WhatsApp Image 2025-10-18 at 17.21.50_bf03f7eaaa.jpg" // <-- fixed path
             alt="profile"
             className={styles.profileImage}
           />
