@@ -1,6 +1,6 @@
 # Node modules
 node_modules/
-
+.env
 # Vite cache
 node_modules/.vite
 
