@@ -1,0 +1,147 @@
+.footer {
+  padding: 3rem 0;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.contactSection {
+  margin-bottom: 2rem;
+}
+
+.contactTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  color: brown;
+}
+
+.contactDescription {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 32rem;
+  line-height: 1.6;
+}
+
+.contactButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .contactButtons {
+    flex-direction: row;
+  }
+}
+
+.emailButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.emailButton:hover {
+  background-color: var(--accent-color);
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.phoneButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.phoneButton:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.buttonIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.socialSection {
+  margin-bottom: 2rem;
+}
+
+.socialTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+  color: brown;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.socialLink:hover {
+  color: var(--accent-color);
+}
+
+.socialIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.copyrightSection {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.copyrightContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .copyrightContainer {
+    flex-direction: row;
+  }
+}
+
+.copyrightText {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.techCredit {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+}
