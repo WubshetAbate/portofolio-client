@@ -2,14 +2,19 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./Projects.module.css";
 
+// Axios instance pointing to backend
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5001",
+  // Use new Render backend in production or fallback to local dev
+});
+
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("/api/projects") // With Vite proxy, this will hit your backend
+    API.get("/api/projects") // Use full backend route
       .then((res) => {
         setProjects(res.data);
         setLoading(false);
@@ -21,13 +26,8 @@ export default function Projects() {
       });
   }, []);
 
-  if (loading) {
-    return <p className={styles.description}>Loading projects...</p>;
-  }
-
-  if (error) {
-    return <p className={styles.description}>{error}</p>;
-  }
+  if (loading) return <p className={styles.description}>Loading projects...</p>;
+  if (error) return <p className={styles.description}>{error}</p>;
 
   return (
     <section id="projects" className={styles.projects}>

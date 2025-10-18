@@ -5,17 +5,18 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    // Only for local development
+    port: 5173,
     proxy: {
+      // Only for local development
       "/api": {
-        target: process.env.VITE_API_URL || "http://localhost:5001",
+        target: "http://localhost:5001", // Local backend
         changeOrigin: true,
         secure: false,
       },
     },
-    port: 5173,
   },
   define: {
+    // Optional: expose env variables if needed
     "process.env": process.env,
   },
 });
