@@ -10,7 +10,7 @@ export default function Hero({ scrollToSection }) {
           I'm Wubshet Abate
           <br />
           <span className={styles.titleHighlight}>
-            a Fullstack Software Developer
+            Fullstack Software Developer
           </span>
         </h1>
         <p className={styles.description}>
