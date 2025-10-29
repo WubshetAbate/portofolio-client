@@ -22,10 +22,10 @@ export default function Hero({ scrollToSection }) {
         <div className={styles.ctaButtons}>
           <a className={styles.primaryButton}>Got a project?</a>
 
-          {/* Downloadable Resume Button */}
+          {/* ✅ Fixed Downloadable Resume Button */}
           <a
-            href="/CV & documents .docx" // <-- fixed path
-            download="CV & documents .docx"
+            href="/Wubshet_Resume.pdf" // <-- Correct path (from public folder)
+            download="Wubshet_Resume.pdf"
             className={styles.secondaryButton}
           >
             <svg
@@ -102,7 +102,7 @@ export default function Hero({ scrollToSection }) {
         <div className={styles.profileContainer}>
           <div className={styles.profileRing}></div>
           <img
-            src="/Images/WhatsApp Image 2025-10-18 at 17.21.50_bf03f7eaaa.jpg" // <-- fixed path
+            src="/Images/WhatsApp Image 2025-10-18 at 17.21.50_bf03f7eaaa.jpg"
             alt="profile"
             className={styles.profileImage}
           />
