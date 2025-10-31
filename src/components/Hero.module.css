@@ -111,19 +111,21 @@
   }
 }
 
+/* =====================
+   Navigation Styling
+   ===================== */
 .navigation {
-  display: flex;
+  display: none; /* Hidden on mobile */
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: flex-end;
+  gap: 1.5rem;
   margin-bottom: 2rem;
   color: var(--text-muted);
 }
 
 @media (min-width: 768px) {
   .navigation {
-    justify-content: flex-end;
-    gap: 1.5rem;
+    display: flex; /* Show on tablet/desktop */
   }
 }
 

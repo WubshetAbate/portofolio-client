@@ -22,6 +22,25 @@
   text-align: justify;
 }
 
+/* ✅ See More button styling */
+.seeMoreBtn {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.seeMoreBtn:hover {
+  background-color: var(--text-primary);
+  color: var(--panel-bg);
+}
+
 .stats {
   margin-top: 1.5rem;
   display: grid;
@@ -33,6 +52,7 @@
 @media (min-width: 640px) {
   .stats {
     grid-template-columns: repeat(3, 1fr);
+    margin-left: 0; /* optional cleanup */
   }
 }
 

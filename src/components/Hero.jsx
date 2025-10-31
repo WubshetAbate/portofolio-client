@@ -22,10 +22,9 @@ export default function Hero({ scrollToSection }) {
         <div className={styles.ctaButtons}>
           <a className={styles.primaryButton}>Got a project?</a>
 
-          {/* ✅ Fixed Downloadable Resume Button */}
           <a
-            href="/Wubshet_Resume.pdf" // <-- Correct path (from public folder)
-            download="Wubshet_Resume.pdf"
+            href="/Wubshet_Abate_Resume.pdf"
+            download="Wubshet_Abate_Resume.pdf"
             className={styles.secondaryButton}
           >
             <svg
