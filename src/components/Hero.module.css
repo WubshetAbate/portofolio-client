@@ -12,46 +12,38 @@
   }
 }
 
-.content {
-}
-
+.content {}
 .greeting {
   color: var(--text-muted);
   margin: 0;
 }
-
 .title {
   font-size: 1.875rem;
   font-weight: 600;
   margin: 0.5rem 0;
   line-height: 1.2;
 }
-
 @media (min-width: 768px) {
   .title {
     font-size: 2.25rem;
   }
 }
-
 .titleHighlight {
   font-size: 1.875rem;
   font-weight: 700;
   color: var(--text-primary);
 }
-
 .description {
   margin: 1.5rem 0;
   color: var(--text-secondary);
   max-width: 32rem;
   line-height: 1.6;
 }
-
 .ctaButtons {
   display: flex;
   gap: 1rem;
   margin: 1.5rem 0;
 }
-
 .primaryButton {
   background-color: var(--accent-color);
   color: white;
@@ -61,13 +53,11 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
 }
-
 .primaryButton:hover {
   background-color: var(--accent-color);
   opacity: 0.9;
   transform: translateY(-1px);
 }
-
 .secondaryButton {
   padding: 0.5rem 1rem;
   border: 1px solid var(--border-color);
@@ -76,59 +66,100 @@
   text-decoration: none;
   transition: all 0.2s ease;
 }
-
 .secondaryButton:hover {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
-
 .techStack {
   display: none;
   gap: 1rem;
   margin-top: 2rem;
   color: var(--text-muted);
 }
-
 @media (min-width: 768px) {
   .techStack {
     display: flex;
   }
 }
-
 .techItem {
   font-size: 0.875rem;
 }
-
 .profileSection {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /* for hamburger overlay */
 }
-
 @media (min-width: 768px) {
   .profileSection {
     align-items: flex-end;
   }
 }
 
-/* =====================
-   Navigation Styling
-   ===================== */
+/* Hamburger button */
+.hamburger {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+}
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Mobile nav */
+.mobileNav {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  background-color: var(--panel-bg);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 15;
+}
+.mobileNav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+.mobileNav a:hover {
+  color: var(--accent-color);
+}
+
+/* Desktop navigation */
 .navigation {
-  display: none; /* Hidden on mobile */
+  display: none; /* hidden on mobile */
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 1.5rem;
   margin-bottom: 2rem;
   color: var(--text-muted);
 }
-
 @media (min-width: 768px) {
   .navigation {
-    display: flex; /* Show on tablet/desktop */
+    display: flex;
   }
 }
-
 .navLink {
   padding: 0.5rem;
   color: var(--text-muted);
@@ -136,11 +167,11 @@
   transition: color 0.2s ease;
   cursor: pointer;
 }
-
 .navLink:hover {
   color: var(--accent-color);
 }
 
+/* Profile Photo */
 .profileContainer {
   position: relative;
   width: 16rem;
@@ -152,14 +183,12 @@
   align-items: center;
   justify-content: center;
 }
-
 @media (min-width: 768px) {
   .profileContainer {
     width: 20rem;
     height: 20rem;
   }
 }
-
 .profileRing {
   position: absolute;
   inset: 0;
@@ -168,7 +197,6 @@
   opacity: 0.2;
   transform: scale(1.1);
 }
-
 .profileImage {
   width: 12rem;
   height: 12rem;
@@ -177,7 +205,6 @@
   position: relative;
   z-index: 10;
 }
-
 @media (min-width: 768px) {
   .profileImage {
     width: 14rem;
